@@ -1,1 +1,1 @@
-# Meteor/React Boilerplate Project
+# Meteor/React Notes App
