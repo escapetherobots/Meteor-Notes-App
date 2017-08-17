@@ -7,6 +7,7 @@ export const Notes = new Mongo.Collection('notes');
 
 // Get all of the user's notes from the DB
 if(Meteor.isServer){
+  // get this data in the client with: Meteor.subscribe('notes') => the arg is the api key
   Meteor.publish('notes', function(){
     return Notes.find({ userId: this.userId })
   });

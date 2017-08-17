@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Accounts } from 'meteor/accounts-base'
 import { Link } from 'react-router';
+import { createContainer } from 'meteor/react-meteor-data';
 import Logo from './Logo';
 
-class Signup extends React.Component {
+export class Signup extends React.Component {
   constructor(props){
     super(props);
 
@@ -34,7 +35,8 @@ class Signup extends React.Component {
 
 
     // use es6 object property assignment {email: email}
-    Accounts.createUser({email, password}, (err) => {
+    // pass method from Account.createUser through higherOrder to props
+    this.props.createUser({email, password}, (err) => {
       if(err) {
         this.setState({error: err.reason});
       } else {
@@ -52,7 +54,7 @@ class Signup extends React.Component {
         <div className="boxed-view__box">
           <Logo />
           <h1>Signup</h1>
-          {this.state.error ? <p>{this.state.error}</p> : undefined }
+          {this.state.error ? <p id="errorMessage">{this.state.error}</p> : undefined }
           <form className="boxed-view__form" onSubmit={this.onSubmit.bind(this)} >
             <input type="email" ref="email" name="email" placeholder="Email" required />
             <input type="password" ref="password" name="password" placeholder="Password" required />
@@ -66,4 +68,12 @@ class Signup extends React.Component {
   }
 }
 
-export default Signup;
+Signup.propTypes = {
+  createUser: React.PropTypes.func.isRequired
+}
+
+export default createContainer( () => {
+  return {
+    createUser: Accounts.createUser
+  }
+}, Signup);

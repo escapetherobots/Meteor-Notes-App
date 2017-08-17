@@ -41,6 +41,7 @@ PrivateHeader.defaultProps = {
 };
 
 export default createContainer( () => {
+  //this runs the component through tracker.autorun
   // anything that gets returned here will be passed to the presentational Component as props
   // that's why the handleLogout method is a prop
   return {
