@@ -1,0 +1,50 @@
+.button {
+  background-color: $primary-color;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: $input-spacing;
+  text-transform: uppercase;
+  font-size: $base-font-size;
+  margin-bottom: $space;
+  line-height: 1.2;
+}
+
+.button--primaryBorder {
+  border: 1px solid $primary-color;
+}
+
+.button--secondary {
+  color: #777777;
+  border: 1px solid #777;
+  background: #f9f9f9;
+}
+
+
+
+.button--pill {
+  background-color: transparent;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  padding: .3rem .8rem;
+}
+
+.button--link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: $primary-color;
+  color: white;
+  border: 2px solid $primary-color;
+  padding: .3rem .8rem .1rem .8rem;
+}
+
+.button--link-text {
+  background: none;
+  padding: 0 .6rem;
+  margin: 0;
+
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

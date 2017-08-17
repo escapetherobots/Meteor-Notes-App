@@ -1,0 +1,25 @@
+.logo {
+  width: 100%;
+  max-width: 36rem;
+  text-align: center;
+}
+
+.logo--small {
+  max-width: 14rem;
+
+  .logo__qwik, .logo__link {
+    path {
+      fill: white;
+    }
+  }
+
+  circle {
+    fill: $secondary-color;
+  }
+
+  .logo__chain {
+    path {
+      fill: white;
+    }
+  }
+}

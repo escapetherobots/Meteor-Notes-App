@@ -1,0 +1,11 @@
+.item {
+  background: #f9f9f9;
+  border: 1px solid $secondary-color;
+  border-radius: 6px;
+  margin-bottom: $space;
+  padding: $space;
+
+  &:hover {
+    background: #f3f3f3;
+  }
+}
