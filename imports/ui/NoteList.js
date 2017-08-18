@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { createContainer } from 'meteor/react-meteor-data';
 import { Meteor } from 'meteor/meteor';
 import { Notes } from './../api/notes';
+import { Session } from 'meteor/session';
 
 import NoteListHeader from './NoteListHeader';
 import NoteListItem from './NoteListItem';
@@ -42,10 +43,18 @@ NoteList.propTypes = {
 export default createContainer( () => {
   // subscribe to Meteor.publish in the Notes API
   // if you don't subscribe it can't connect to the state.
+  const selectedNoteId = Session.get('selectedNoteId');
   Meteor.subscribe('notes');
 
   return {
-    notes: Notes.find().fetch()
-
+    // now subscribed you can access Notes collection
+    // and query with Notes.find()
+    notes: Notes.find().fetch().map( (note) => {
+        return {
+          ...note,
+          selected: note._id === selectedNoteId // boolean
+        }
+    })
   }
+
 }, NoteList);
