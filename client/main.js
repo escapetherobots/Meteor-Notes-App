@@ -7,8 +7,12 @@ import { Tracker } from 'meteor/tracker';
 import { browserHistory } from 'react-router';
 
 Tracker.autorun( () => {
+  // watch for changes in/on these methods
   const isAuthenticated = !!Meteor.userId();
-  onAuthChange(isAuthenticated);
+  const currentPagePrivacy = Session.get('currentPagePrivacy');
+
+  console.log('currentPagePrivacy', currentPagePrivacy);
+  onAuthChange(isAuthenticated, currentPagePrivacy);
 });
 
 Tracker.autorun( () => {
