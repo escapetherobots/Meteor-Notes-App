@@ -3,6 +3,7 @@ import expect from 'expect';
 import { mount } from 'enzyme';
 import { Meteor } from 'meteor/meteor';
 
+// import the non-higher order function
 import { NoteListHeader } from './NoteListHeader';
 
 if(Meteor.isClient){
