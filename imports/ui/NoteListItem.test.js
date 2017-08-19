@@ -27,7 +27,7 @@ if(Meteor.isClient){
 
       expect(wrapper.find('h5').text()).toBe(notes[0].title);
       // formatted timestamp result
-      expect(wrapper.find('p').text()).toBe('8/17/17');
+      expect(wrapper.find('p#timeStamp').text()).toBe('8/17/17');
 
     });
 
