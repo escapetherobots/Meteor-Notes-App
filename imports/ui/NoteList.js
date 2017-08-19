@@ -49,7 +49,11 @@ export default createContainer( () => {
   return {
     // now subscribed you can access Notes collection
     // and query with Notes.find()
-    notes: Notes.find().fetch().map( (note) => {
+    notes: Notes.find({}, { // find all, and with these modifiers
+      sort: {
+        updatedAt: -1 // descending
+      }
+    }).fetch().map( (note) => {
         return {
           ...note,
           selected: note._id === selectedNoteId // boolean
