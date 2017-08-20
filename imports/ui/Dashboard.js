@@ -15,10 +15,14 @@ const Dashboard = (props) => {
   return (
     <div>
       <PrivateHeader title={"Super Links App"}/>
-      { props.wait ? <MyLoader /> : undefined}
       <div className="page-content">
-        <NoteList />
-        <Editor />
+        {/* { props.wait ? <MyLoader /> : undefined} */}
+        <div className="page-content__sidebar">
+          <NoteList />
+        </div>
+        <div className="page-content__main">
+          <Editor />
+        </div>
       </div>
     </div>
   );

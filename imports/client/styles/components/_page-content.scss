@@ -1,11 +1,19 @@
 .page-content {
+  display: flex;
   margin: 0 auto;
   max-width: $site-max-width;
   padding: $space;
+  height: $page-content-height;
 
 }
 
-.page-content__functionality {
+.page-content__sidebar {
   display: flex;
-  justify-content: center;
+  width: $page-content-sidebar-width;
+}
+
+.page-content__main {
+  display: flex;
+  width: $page-content-main-width;
+
 }

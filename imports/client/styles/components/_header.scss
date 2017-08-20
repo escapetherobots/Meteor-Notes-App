@@ -1,11 +1,12 @@
 .header {
   background-color: $primary-color;
-  color: white;
+  color: $header-font-color;
 
 }
 
 .header__content {
   display: flex;
+  height: $header-height;
   justify-content: space-between;
   max-width: $site-max-width;
   margin: 0 auto;

@@ -3,12 +3,17 @@ $base-font-size: 1.6rem;
 
 // Size
 $space: 1.4rem;
-$site-max-width: 80rem;
+$site-max-width: 100rem;
 
 // Colors
 $lightGray: #dddddd;
-$primary-color: #00AFB7;
+$primary-color: #88C440;
 $secondary-color: #616466;
+
+// Header
+$header-bg: $primary-color;
+$header-font-color: white;
+$header-height: 6rem;
 
 // Form Inputs
 $input-border: $lightGray;
@@ -16,3 +21,8 @@ $input-spacing: 1rem;
 
 // Boxed View
 $boxed-view-overlay-bg: $lightGray;
+
+// Page Content
+$page-content-sidebar-width: 30rem;
+$page-content-main-width: calc( #{ $site-max-width } - #{ $page-content-sidebar-width } );
+$page-content-height: calc(100vh - #{ $header-height });
