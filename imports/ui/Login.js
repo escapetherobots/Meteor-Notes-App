@@ -44,8 +44,8 @@ export class Login extends React.Component {
     return (
       <div className="boxed-view">
         <div className="boxed-view__box">
-          <Logo />
-          <h1>Login</h1>
+          <h1>Meteor Notes</h1>
+          <h2>Login</h2>
           <p>app description</p>
           {this.state.error ? <p id="errorMessage">{this.state.error}</p> : undefined }
           <form className="boxed-view__form" onSubmit={this.onSubmit.bind(this)} >

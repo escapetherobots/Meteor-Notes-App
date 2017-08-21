@@ -5,14 +5,48 @@
   border: 1px solid $lightGray;
 }
 
+.item-list__header {
+  display: flex;
+  flex-direction: column;
+  padding: $space;
+}
+
 .item {
   background: #f9f9f9;
-  border: 1px solid $secondary-color;
-  border-radius: 6px;
+  border-left: 4px solid $secondary-color;
   margin-bottom: $space;
   padding: $space;
+  cursor: pointer;
+  transition: background-color .3s ease, border-left .3s ease;
 
   &:hover {
-    background: #f3f3f3;
+    background: #f2f2f2;
+    border-left: 4px solid transparent;
   }
+}
+
+.item--selected, item--selected:hover {
+  background-color: $lightGray;
+  border-left: 4px solid $primary-color;
+}
+
+.item--selected .item__title {
+  font-weight: bold;
+}
+
+.item__title {
+  font-weight: normal;
+  font-size: $base-font-size;
+  margin-bottom: .4rem;
+}
+
+.item__subtitle {
+  color: #333333;
+  margin: 0;
+}
+
+.empty-item {
+  font-style: italic;
+  padding: $space;
+  text-align: center;
 }

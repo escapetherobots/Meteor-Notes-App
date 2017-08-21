@@ -22,7 +22,6 @@ export const PrivateHeader = (props) => {
   return (
     <div className="header">
       <div className="header__content">
-        <Logo stylingInfo={"logo--small"} />
         <h1 className="header__title">{props.title}</h1>
 
         <button className="button button--link-text" onClick={props.handleLogout}>Logout</button>

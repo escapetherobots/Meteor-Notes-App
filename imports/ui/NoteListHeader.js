@@ -19,9 +19,8 @@ export const NoteListHeader = (props) => {
   };
 
   return (
-    <div>
-      Note List Header
-      <button onClick={createNote}>Create Note</button>
+    <div className="item-list__header">
+      <button className="button" onClick={createNote}>Create Note</button>
     </div>
   );
 }

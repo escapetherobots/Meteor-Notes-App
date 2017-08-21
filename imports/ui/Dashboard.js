@@ -14,7 +14,7 @@ const Dashboard = (props) => {
   console.log('current page private?', props.pragePrivate);
   return (
     <div>
-      <PrivateHeader title={"Super Links App"}/>
+      <PrivateHeader title={"Meteor Notes"}/>
       <div className="page-content">
         {/* { props.wait ? <MyLoader /> : undefined} */}
         <div className="page-content__sidebar">
