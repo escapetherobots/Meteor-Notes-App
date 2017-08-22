@@ -11,7 +11,7 @@ import MyLoader from './MyLoader';
 
 // PRESENTATION COMPONENT (vs container component with class syntax)
 const Dashboard = (props) => {
-  console.log('current page private?', props.pragePrivate);
+  console.log('current page private?', props.pagePrivate);
   return (
     <div>
       <PrivateHeader title={"Meteor Notes"}/>

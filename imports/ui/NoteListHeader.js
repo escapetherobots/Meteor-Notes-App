@@ -14,6 +14,8 @@ export const NoteListHeader = (props) => {
         // this will return res = id of the newly inserted note
         // set the 'selectedId' in the session
         props.session.set('selectedNoteId', res);
+        // change 'isNavOpen' in main.js
+        // props.session.set('isNavOpen', false);
       }
     });
   };
